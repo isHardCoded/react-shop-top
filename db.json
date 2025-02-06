@@ -3,7 +3,21 @@
     {
       "id": 1,
       "title": "Gradient Graphic T-shirt",
-      "imageUrl": "",
+      "imageUrl": "./src/assets/images/t-shirt-1.png",
+      "rating": 3.5,
+      "price": 145
+    },
+    {
+      "id": 2,
+      "title": "Gradient Graphic T-shirt",
+      "imageUrl": "./src/assets/images/t-shirt-2.png",
+      "rating": 3.5,
+      "price": 145
+    },
+    {
+      "id": 3,
+      "title": "Gradient Graphic T-shirt",
+      "imageUrl": "./src/assets/images/t-shirt-3.png",
       "rating": 3.5,
       "price": 145
     }

@@ -1,0 +1,21 @@
+.product__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.product__title {
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+.product__price {
+  font-size: 24px;
+  font-weight: bold;
+}
