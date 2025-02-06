@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Gradient Graphic T-shirt",
+      "imageUrl": "",
+      "rating": 3.5,
+      "price": 145
+    }
+  ]
+}
