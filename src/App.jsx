@@ -7,6 +7,11 @@ import React from "react";
 function App() {
   const [products, setProducts] = React.useState([]);
 
+  const [open, setOpen] = React.useState(false);
+  const handleOpenMenu = () => {
+    setOpen((open) => !open);
+  };
+
   const fetchData = async () => {
     try {
       const response = await fetch("http://localhost:3000/products").then(
@@ -30,9 +35,16 @@ function App() {
         <section className="products">
           <div className="products__header">
             <h2>Casual</h2>
-            <p>
-              Sort by: <b>Most popular</b>
-            </p>
+
+            <div className="choose__sort">
+              <p onClick={() => handleOpenMenu()}>Sort by: Most popular</p>
+              {open && (
+                <ul className="choose__list">
+                  <li>Price Up</li>
+                  <li>Price Down</li>
+                </ul>
+              )}
+            </div>
           </div>
           <div className="products__list">
             {products.map((item) => (
