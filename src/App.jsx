@@ -5,9 +5,16 @@ import ProductCard from "./components/ProductCard/ProductCard";
 import React from "react";
 
 function App() {
-  const [products, setProducts] = React.useState([]);
+  const chooseItems = ["Price Up", "Price Down", "Most Popular"];
 
+  const [products, setProducts] = React.useState([]);
   const [open, setOpen] = React.useState(false);
+  const [choose, setChoose] = React.useState("Most Popular");
+
+  const handleChooseItem = (element) => {
+    setChoose(element);
+  };
+
   const handleOpenMenu = () => {
     setOpen((open) => !open);
   };
@@ -35,13 +42,18 @@ function App() {
         <section className="products">
           <div className="products__header">
             <h2>Casual</h2>
-
             <div className="choose__sort">
-              <p onClick={() => handleOpenMenu()}>Sort by: Most popular</p>
+              <p onClick={() => handleOpenMenu()}>Sort by: {choose}</p>
               {open && (
                 <ul className="choose__list">
-                  <li>Price Up</li>
-                  <li>Price Down</li>
+                  {chooseItems.map((element) => (
+                    <li
+                      className={choose == element ? "active" : ""}
+                      onClick={() => handleChooseItem(element)}
+                    >
+                      {element}
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>

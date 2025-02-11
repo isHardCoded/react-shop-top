@@ -47,7 +47,7 @@
   border: 1px gray solid;
   border-radius: 10px;
 
-  width: 100%;
+  width: 130px;
   position: absolute;
   top: 35px;
 }
@@ -68,4 +68,8 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
+}
+
+.active {
+  background-color: #f0f0f0;
 }
